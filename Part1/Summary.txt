@@ -1,0 +1,14 @@
+Part 1 – Analysis and Preprocessing Summary
+Dataset: W Store Sales
+
+I loaded the three files (sales.csv, features.csv, stores.csv), examined the first 10 rows, data types, shape, and key statistics (mean, standard deviation, etc.).
+
+I converted the Date columns to datetime format and changed the IsHoliday column from True/False to 0/1. I then merged the three tables into one dataset.
+
+For visualisation I created histograms, boxplots, a time-series line chart of average weekly sales, and scatter plots. These showed that sales are generally higher on holidays and that Store Type A stores tend to have higher sales.
+
+During cleaning I filled missing MarkDown values with 0, used forward fill for any remaining missing CPI and Unemployment values, and converted the Store Type (A/B/C) into numerical form using one-hot encoding. I also checked for outliers in Weekly Sales using a boxplot and the IQR method, but decided to keep the high values because holiday spikes are real.
+
+I calculated the correlation matrix and created a heatmap. Store Size and several other features showed noticeable relationships with Weekly Sales.
+
+The final dataset is clean, fully numerical, and ready for machine learning models.
